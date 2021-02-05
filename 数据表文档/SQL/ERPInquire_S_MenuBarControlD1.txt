@@ -1,0 +1,9 @@
+use hy
+create table ERPInquire_S_MenuBarControlD1
+(
+ ID varchar(100) not null,
+ ModuleNameChild varchar(255) not null,
+ FID varchar(100) not null,
+ PermissionControl VARCHAR(10) not null,
+ primary key(ID,ModuleNameChild)
+)

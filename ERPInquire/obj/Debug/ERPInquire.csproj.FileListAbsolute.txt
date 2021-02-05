@@ -1,0 +1,16 @@
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\MyMIS.ReadCF2.resources
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.Login.resources
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.MainFrm.resources
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.Properties.Resources.resources
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.csproj.GenerateResource.Cache
+E:\汇源印刷\ERPInquire\ERPInquire\bin\Debug\ERPInquire.exe.config
+E:\汇源印刷\ERPInquire\ERPInquire\bin\Debug\ERPInquire.exe
+E:\汇源印刷\ERPInquire\ERPInquire\bin\Debug\ERPInquire.pdb
+E:\汇源印刷\ERPInquire\ERPInquire\bin\Debug\IO.dll
+E:\汇源印刷\ERPInquire\ERPInquire\bin\Debug\SqlConnect.dll
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.exe
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.pdb
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.MenuBar.Authen.resources
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.CustomControl.CommonControl2.resources
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.UsersControl.CommonControl.resources
+E:\汇源印刷\ERPInquire\ERPInquire\obj\Debug\ERPInquire.MenuBar.Help.resources

@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{925482F2-9500-4630-B904-AC99C0AED9B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPInquire</RootNamespace>
+    <AssemblyName>汇源印刷包装科技%28天津%29ERP数据查询</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>E:\test\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>zh-CN</TargetCulture>
+    <ProductName>汇源ERP数据查询系统</ProductName>
+    <PublisherName>汇源ERP数据查询系统</PublisherName>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>query_64px_1181401_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Config\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4B49CEAFAE29CA5060C385B98BE1A71F3A6B067C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>天津汇源ERP数据查询系统_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\ERP公用工具类20180203\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.Hui.Controls">
+      <HintPath>..\..\..\data1\Debug\Com.Hui.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.Hui.iMRP.Utils">
+      <HintPath>..\..\..\工序进度查询dll\Com.Hui.iMRP.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.iCost, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Com.iCost.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.iReport, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Com.iReport.dll</HintPath>
+    </Reference>
+    <Reference Include="DocToolkit">
+      <HintPath>DLL\DocToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>DLL\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\IO.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\..\..\C#窗体控件\皮肤控件\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\ERP公用工具类20180203\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\iCost工程文件\iCost\bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\iCost工程文件\iCost\bin\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\iCost工程文件\iCost\bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\iCost工程文件\iCost\bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="O2S.Components.PDFView4NET">
+      <HintPath>DLL\O2S.Components.PDFView4NET.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlConnect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\SqlConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net20\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net20\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseInquire\SQLiteHelper.cs" />
+    <Compile Include="CustomControl\CommonControl10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl10.Designer.cs">
+      <DependentUpon>CommonControl10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl11.Designer.cs">
+      <DependentUpon>CommonControl11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl12.Designer.cs">
+      <DependentUpon>CommonControl12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl13.Designer.cs">
+      <DependentUpon>CommonControl13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl14.Designer.cs">
+      <DependentUpon>CommonControl14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl15.Designer.cs">
+      <DependentUpon>CommonControl15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl16.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl16.Designer.cs">
+      <DependentUpon>CommonControl16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl6.Designer.cs">
+      <DependentUpon>CommonControl6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl7.Designer.cs">
+      <DependentUpon>CommonControl7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl8.Designer.cs">
+      <DependentUpon>CommonControl8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl9.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl9.Designer.cs">
+      <DependentUpon>CommonControl9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\Query.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Query.designer.cs">
+      <DependentUpon>Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\AddToolstrip.cs" />
+    <Compile Include="Drawing\Command.cs" />
+    <Compile Include="Drawing\CommandAdd.cs" />
+    <Compile Include="Drawing\CommandChangeState.cs" />
+    <Compile Include="Drawing\CommandDelete.cs" />
+    <Compile Include="Drawing\CommandDeleteAll.cs" />
+    <Compile Include="Drawing\DrawConnector.cs" />
+    <Compile Include="Drawing\DrawEllipse.cs" />
+    <Compile Include="Drawing\DrawImage.cs" />
+    <Compile Include="Drawing\DrawingPens.cs" />
+    <Compile Include="Drawing\DrawLine.cs" />
+    <Compile Include="Drawing\DrawObject.cs" />
+    <Compile Include="Drawing\DrawPolygon.cs" />
+    <Compile Include="Drawing\DrawPolyLine.cs" />
+    <Compile Include="Drawing\DrawRectangle.cs" />
+    <Compile Include="Drawing\DrawText.cs" />
+    <Compile Include="BaseInquire\ExcelOper.cs" />
+    <Compile Include="BaseInquire\ExcleIO.cs" />
+    <Compile Include="BaseInquire\ExportHelper.cs" />
+    <Compile Include="Drawing\FillBrushes.cs" />
+    <Compile Include="Drawing\GraphicsList.cs" />
+    <Compile Include="Drawing\GraphicsProperties.cs" />
+    <Compile Include="Drawing\Layer.cs" />
+    <Compile Include="Drawing\LayerEdit.cs" />
+    <Compile Include="Drawing\Layers.cs" />
+    <Compile Include="BaseInquire\Log.cs" />
+    <Compile Include="BaseInquire\Logger.cs" />
+    <Compile Include="BaseInquire\SqlHelper.cs" />
+    <Compile Include="Drawing\Tool.cs" />
+    <Compile Include="Drawing\ToolConnector.cs" />
+    <Compile Include="Drawing\ToolEllipse.cs" />
+    <Compile Include="Drawing\ToolImage.cs" />
+    <Compile Include="Drawing\ToolLine.cs" />
+    <Compile Include="Drawing\ToolObject.cs" />
+    <Compile Include="Drawing\ToolPointer.cs" />
+    <Compile Include="Drawing\ToolPolygon.cs" />
+    <Compile Include="Drawing\ToolPolyLine.cs" />
+    <Compile Include="Drawing\ToolRectangle.cs" />
+    <Compile Include="Drawing\ToolText.cs" />
+    <Compile Include="Drawing\UndoManager.cs" />
+    <Compile Include="CustomControl\CommonControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl2.Designer.cs">
+      <DependentUpon>CommonControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl3.Designer.cs">
+      <DependentUpon>CommonControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl4.Designer.cs">
+      <DependentUpon>CommonControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl5.Designer.cs">
+      <DependentUpon>CommonControl5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\ChangeMaterialY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\ChangeMaterialY.Designer.cs">
+      <DependentUpon>ChangeMaterialY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\ChangeMaterialJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\ChangeMaterialJ.Designer.cs">
+      <DependentUpon>ChangeMaterialJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\ConversionProductOriginalPaper..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\ConversionProductOriginalPaper..Designer.cs">
+      <DependentUpon>ConversionProductOriginalPaper..cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\Display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\Display.Designer.cs">
+      <DependentUpon>Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\DrawArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\DrawArea.designer.cs">
+      <DependentUpon>DrawArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\Financialtax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\Financialtax.Designer.cs">
+      <DependentUpon>Financialtax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\GDGZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\GDGZ.Designer.cs">
+      <DependentUpon>GDGZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\Hello.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\Hello.Designer.cs">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\MaterialRequirements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\MaterialRequirements.Designer.cs">
+      <DependentUpon>MaterialRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\MaterialsOfRecipients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\MaterialsOfRecipients.Designer.cs">
+      <DependentUpon>MaterialsOfRecipients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\PaperPriceTonConversion..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\PaperPriceTonConversion..Designer.cs">
+      <DependentUpon>PaperPriceTonConversion..cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\PDFHELP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\PDFHELP.Designer.cs">
+      <DependentUpon>PDFHELP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\PermissionsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\PermissionsSet.Designer.cs">
+      <DependentUpon>PermissionsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\PersonnelAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\PersonnelAccess.Designer.cs">
+      <DependentUpon>PersonnelAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\PrintingTool..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\PrintingTool..Designer.cs">
+      <DependentUpon>PrintingTool..cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\ProcessConversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\ProcessConversion.Designer.cs">
+      <DependentUpon>ProcessConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\ProcessConversionPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\ProcessConversionPreview.Designer.cs">
+      <DependentUpon>ProcessConversionPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\ReadCF2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\ReadCF2.designer.cs">
+      <DependentUpon>ReadCF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\ShowBmp1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drawing\ShowBmp1.Designer.cs">
+      <DependentUpon>ShowBmp1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\ShowBmp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drawing\ShowBmp2.Designer.cs">
+      <DependentUpon>ShowBmp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\SpineCalculate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\SpineCalculate.Designer.cs">
+      <DependentUpon>SpineCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\StandardSizeTable..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\StandardSizeTable..Designer.cs">
+      <DependentUpon>StandardSizeTable..cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\ThinFilmTonerConversion..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\ThinFilmTonerConversion..Designer.cs">
+      <DependentUpon>ThinFilmTonerConversion..cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\UnitConversion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar\UnitConversion.Designer.cs">
+      <DependentUpon>UnitConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\Authen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\Authen.Designer.cs">
+      <DependentUpon>Authen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar\PermissionControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBar\PermissionControl.Designer.cs">
+      <DependentUpon>PermissionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomControl\CommonControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CommonControl1.Designer.cs">
+      <DependentUpon>CommonControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomControl\CommonControl10.resx">
+      <DependentUpon>CommonControl10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl11.resx">
+      <DependentUpon>CommonControl11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl12.resx">
+      <DependentUpon>CommonControl12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl13.resx">
+      <DependentUpon>CommonControl13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl14.resx">
+      <DependentUpon>CommonControl14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl15.resx">
+      <DependentUpon>CommonControl15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl16.resx">
+      <DependentUpon>CommonControl16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl2.resx">
+      <DependentUpon>CommonControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl3.resx">
+      <DependentUpon>CommonControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl4.resx">
+      <DependentUpon>CommonControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl5.resx">
+      <DependentUpon>CommonControl5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl6.resx">
+      <DependentUpon>CommonControl6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl7.resx">
+      <DependentUpon>CommonControl7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl8.resx">
+      <DependentUpon>CommonControl8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CommonControl9.resx">
+      <DependentUpon>CommonControl9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\Query.resx">
+      <DependentUpon>Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\ChangeMaterialY.resx">
+      <DependentUpon>ChangeMaterialY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\ChangeMaterialJ.resx">
+      <DependentUpon>ChangeMaterialJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\ConversionProductOriginalPaper..resx">
+      <DependentUpon>ConversionProductOriginalPaper..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\Display.resx">
+      <DependentUpon>Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\Financialtax.resx">
+      <DependentUpon>Financialtax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\GDGZ.resx">
+      <DependentUpon>GDGZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\Hello.resx">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\MaterialRequirements.resx">
+      <DependentUpon>MaterialRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\MaterialsOfRecipients.resx">
+      <DependentUpon>MaterialsOfRecipients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\PaperPriceTonConversion..resx">
+      <DependentUpon>PaperPriceTonConversion..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\PDFHELP.resx">
+      <DependentUpon>PDFHELP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\PermissionsSet.resx">
+      <DependentUpon>PermissionsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\PersonnelAccess.resx">
+      <DependentUpon>PersonnelAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\PrintingTool..resx">
+      <DependentUpon>PrintingTool..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\ProcessConversion.resx">
+      <DependentUpon>ProcessConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\ProcessConversionPreview.resx">
+      <DependentUpon>ProcessConversionPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\ReadCF2.resx">
+      <DependentUpon>ReadCF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drawing\ShowBmp1.resx">
+      <DependentUpon>ShowBmp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drawing\ShowBmp2.resx">
+      <DependentUpon>ShowBmp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\SpineCalculate.resx">
+      <DependentUpon>SpineCalculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\StandardSizeTable..resx">
+      <DependentUpon>StandardSizeTable..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\ThinFilmTonerConversion..resx">
+      <DependentUpon>ThinFilmTonerConversion..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\UnitConversion.resx">
+      <DependentUpon>UnitConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\Authen.resx">
+      <DependentUpon>Authen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar\PermissionControl.resx">
+      <DependentUpon>PermissionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="CustomControl\CommonControl1.resx">
+      <DependentUpon>CommonControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Config\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Config\ClassDiagram1.cd" />
+    <None Include="Config\Log4.config" />
+    <None Include="Config\Nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\packages.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_96_arzo_icon_icons_32px_41872_easyicon.net.png" />
+    <None Include="Resources\Magnifier_32px_1194797_easyicon.net.png" />
+    <None Include="Resources\download_32px_1205802_easyicon.net.png" />
+    <None Include="Resources\file_upload_32px_1181850_easyicon.net.png" />
+    <None Include="Resources\file_upload_48px_1181850_easyicon.net.png" />
+    <None Include="Resources\direction_up_48px_19597_easyicon.net.png" />
+    <None Include="Resources\direction_down_48px_40470_easyicon.net.png" />
+    <None Include="Resources\direction_down_32px_40470_easyicon.net.png" />
+    <None Include="Resources\direction_up_32px_19597_easyicon.net.png" />
+    <None Include="Resources\arrow_down_32px_1175300_easyicon.net.png" />
+    <None Include="Resources\arrow_up_32px_1175303_easyicon.net.png" />
+    <None Include="Resources\arrow_33.230769230769px_1150687_easyicon.net.png" />
+    <None Include="Resources\arrow_16.615384615385px_1150687_easyicon.net.png" />
+    <None Include="Resources\package_manager_icon_48px_519271_easyicon.net.png" />
+    <None Include="Resources\arrow_bottom_48px_545433_easyicon.net.png" />
+    <None Include="Resources\arrow_top_48px_545432_easyicon.net.png" />
+    <None Include="Resources\Magnifier_48px_1180702_easyicon.net.png" />
+    <None Include="Resources\Magnifier_48px_1180702_easyicon.net1.png" />
+    <None Include="Resources\Magnifier_48px_1180702_easyicon.net2.png" />
+    <None Include="Resources\Magnifier_48px_1180702_easyicon.net3.png" />
+    <None Include="Resources\TIM截图20180108125532.png" />
+    <None Include="bin\Debug\data\微信图片_20171226074839.png" />
+    <None Include="Resources\clean_delete_eraser_48px_4107_easyicon.net.png" />
+    <None Include="Resources\swap_horiz_48px_1182282_easyicon.net.png" />
+    <None Include="Resources\clean_delete_eraser_48px_4107_easyicon.net1.png" />
+    <None Include="Resources\save_disk_48px_564549_easyicon.net.png" />
+    <None Include="Resources\zoomin_64px_1158358_easyicon.net.png" />
+    <None Include="Resources\zoomout_48px_1158360_easyicon.net.png" />
+    <None Include="Resources\counter_clockwise_left_rotate_undo_48px_2127_easyicon.net.png" />
+    <None Include="Resources\object_right_rotate_48px_6264_easyicon.net.png" />
+    <None Include="Resources\mouse_26.88px_1155262_easyicon.net.png" />
+    <None Include="Resources\move_alt_48px_1158949_easyicon.net.png" />
+    <None Include="Resources\move_alt_48px_1158949_easyicon.net1.png" />
+    <None Include="Resources\pie-chart.png" />
+    <None Include="Resources\pie-chart1.png" />
+    <None Include="Resources\pie-chart2.png" />
+    <None Include="Resources\pie-chart3.png" />
+    <None Include="Resources\pie-chart4.png" />
+    <None Include="Resources\printer_48px_1093622_easyicon.net.png" />
+    <Content Include="query_64px_1181401_easyicon.net.ico" />
+    <None Include="Resources\clockwise-arrow.png" />
+    <None Include="Resources\floppy-icon.png" />
+    <None Include="Resources\printer_72px_1205763_easyicon.net.png" />
+    <None Include="Resources\calculator2.png" />
+    <None Include="Resources\MotionBuilder_96px_1180116_easyicon.net.png" />
+    <Content Include="Resourse\20171225030450460_easyicon_net_32.ico" />
+    <Content Include="Resourse\20171225030547149_easyicon_net_64.ico" />
+    <Content Include="Resourse\20171226075450813_easyicon_net_48.ico" />
+    <Content Include="DLL\IO.dll" />
+    <Content Include="DLL\SqlConnect.dll" />
+    <Content Include="Resourse\point_16px_1175643_easyicon.net.ico" />
+    <Content Include="Resourse\point_24px_1175443_easyicon.net.ico" />
+    <Content Include="Resourse\Untitled-1.ico" />
+    <Content Include="Resourse\微信图片_20171225144331_128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net20\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net20\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net20\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net20\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

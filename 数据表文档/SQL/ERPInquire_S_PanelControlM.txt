@@ -1,0 +1,8 @@
+use hy
+create table ERPInquire_S_PanelControlM
+(
+  ID varchar(100) not null,
+  ZID varchar(100) not null,
+  ModuleCategory varchar(10) not null,
+  PRIMARY key (ID)
+)

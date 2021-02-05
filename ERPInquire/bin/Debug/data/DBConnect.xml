@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <SqlConnect>
+    <ID>cac7507b-e742-4887-9ce1-10692687c697</ID>
+    <WorkshopName>ERP</WorkshopName>
+    <Server>192.168.0.97</Server>
+    <Uid>sa</Uid>
+    <Pwd />
+    <Trusted_Connection>no</Trusted_Connection>
+    <Database>hy</Database>
+    <Active>1</Active>
+  </SqlConnect>
+</NewDataSet>

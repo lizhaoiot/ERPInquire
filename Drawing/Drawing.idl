@@ -1,0 +1,51 @@
+// Drawing.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(Drawing.tlb)，该类型库将成为
+// Drawing.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(5310DC95-D310-4FAE-8A00-1DC6F4453374), version(1.0),
+  control ]
+library DrawingLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CDrawingCtrl 的主调度接口
+	[ 
+		uuid(1A91DCCA-B2E6-4C5F-AE71-C2FFB1F4335D)	
+	]
+	dispinterface _DDrawing
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  CDrawingCtrl 的事件调度接口
+
+	[ 
+		uuid(D1D6788F-B824-44F7-8C68-9DEE32310C9A)	
+	]
+	dispinterface _DDrawingEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CDrawingCtrl 的类信息
+	[
+		uuid(B97FE269-5B30-43FE-B147-41AF88B720AC), licensed
+	]
+	coclass Drawing
+	{
+		[default] dispinterface _DDrawing;
+		[default, source] dispinterface _DDrawingEvents;
+	};
+
+};
